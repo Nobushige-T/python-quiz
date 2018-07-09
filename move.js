@@ -1,6 +1,6 @@
 // 読み込んだらフェードアウト
 $(window).on('load',function(){
-    // 消えるタイミングはお好みで
+    // 消えるタイミング
     $('.loading').delay(1500).fadeOut(400);
 });
 
@@ -10,7 +10,14 @@ function stopload(){
 }
 setTimeout('stopload()',10000);
 
+//四角のアニメーション
 var squaremoments = anime({
   targets:'.square',
+});
 
+//リストのボタン動作
+$(function() {
+    $('menu-list').on('click', function() {
+        $(this).toggleClass('active');
+    });
 });

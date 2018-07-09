@@ -16,10 +16,51 @@ h1:after {
 body{
   background: black;
 }
+
 .square{
-  width: 150px;
+  width: 100px;
   height: 100px;
   background: white;
+  border-radius: 10px;
+}
+
+.menu-list,
+.menu-list span{
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.menu-list{
+  position: relative;
+  width: 40px;
+  height: 34px;
+}
+.menu-list span{
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 4px;
+}
+.menu-list span:nth-of-type(1) {
+  top: 10px;
+}
+.menu-list span:nth-of-type(2) {
+  top: 20px;
+}
+.menu-list span:nth-of-type(3) {
+  bottom: 0;
+}
+.menu-list.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+}
+.menu-list.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.menu-list.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
 }
 
 .loading{
