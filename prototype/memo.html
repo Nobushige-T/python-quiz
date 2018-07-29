@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="memomemo.css">
+  </head>
+  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="anime.min.js"></script>
+  <script src="memo2.js"></script>
+  <body>
+    <div class="square"></div>
+    <script>
+    anime({
+      targets: ".square", // 対象を指定
+      translateX: 800,
+      rotate: 360,
+      duration: 5000, // ミリ秒指定
+      loop: true, // 繰り返し
+      complete:comFunc, //動作が完了したら
+      easing: "easeInOutCubic" // 加減速の種類
+    });
+    </script>
+  </body>
+</html>

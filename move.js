@@ -10,14 +10,20 @@ function stopload(){
 }
 setTimeout('stopload()',10000);
 
-//四角のアニメーション
-var squaremoments = anime({
-  targets:'.square',
-});
-
 //リストのボタン動作
 $(function() {
-    $('menu-list').on('click', function() {
+    $('.menu-list').on('click', function() {
         $(this).toggleClass('active');
     });
+});
+
+//メニューの出し入れ
+$(function(){
+  $('.menu-list').on('click',function(){
+    if ($('#menu').css('display') == 'none') {
+      $('#menu').slideDown('fast');
+    } else {
+      $('#menu').slideUp('fast');
+    }
+  });
 });

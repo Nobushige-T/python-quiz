@@ -3,38 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>タイトル画面</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="anime.min.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
   <script src="move.js"></script>
   <body>
     <div class="loading">
       <div class="animation">Now Loading...</div>
     </div>
     <div id="contents">
-      <h1>タイトル</h1>
-      <div class="square"></div>
-      <script>
-      anime({
-        targets: ".square", // 対象を指定
-        translateX: 800,
-        rotate: 360,
-        duration: 3000, // ミリ秒指定
-        loop: true, // 繰り返し
-        easing: "easeInOutCubic" // 加減速の種類
-      });
-      </script>
-
-      <a href="#" class="menu-list">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-
-      <button type="button" id="btn" class="btn01" name="button01">クイズを開始する</button>
-      <button type="button" id="btn" class="btn02" name="button02">テスト2</button>
-      <button type="button" id="btn" class="btn03" name="button03">テスト3</button>
+      <h1 class="text-warning">ぱいそんくいず</h1>
+      <div class="main">
+      <div id="divide">
+        <a href="#" class="menu-list" id="list-contents">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <ul id="menu">
+          <li><a href="https://getbootstrap.com/docs/3.3/getting-started/">bootstrap</a></li
+        </ul>
+      </div>
+    </div>
+      <section id="buttons">
+        <button type="button" id="btn" class="btn01" name="button01">クイズをかいしする</button>
+        <button type="button" id="btn" class="btn02" name="button02">せいせきかくにん</button>
+        <button type="button" id="btn" class="btn03" name="button03">まいぺーじ</button>
+      </section>
     </div>
   </body>
 </html>
